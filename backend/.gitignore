@@ -1,0 +1,16 @@
+/prices.csv
+/ETF1_sample.csv
+.idea
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Logs
+logs/*.log
+
+# Temporary files
+*.tmp
+tmp/
