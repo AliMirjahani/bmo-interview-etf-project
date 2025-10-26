@@ -70,6 +70,7 @@ def validate_and_read_etf_csv(file_path: str) -> pd.DataFrame:
         negative_weights = df[weights < 0]['name'].tolist()[:3]
         raise NegativeWeightsError(negative_weights)
 
+    # we can also normalize the weight so the sum be 1, but we are not doing that for now
     if (weights > 1).any():
         over_weights = df[weights > 1]['name'].tolist()[:3]
         raise WeightsExceedOneError(over_weights)
