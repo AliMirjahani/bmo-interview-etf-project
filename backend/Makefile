@@ -4,7 +4,7 @@ PYTHON ?= python
 PYTEST ?= $(PYTHON) -m pytest
 
 install-deps:
-	pip install -r requirements.txt
+	pip install -r requirements.txt  # using uv or pipenv or poetry for actual production project
 
 run:
 	clear && PORT=$(PORT) $(PYTHON) main.py
