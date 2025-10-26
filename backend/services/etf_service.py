@@ -18,14 +18,14 @@ def calculate_etf_data(etf: pd.DataFrame, top_holdings_count: int) -> Tuple[List
     holdings_by_value = []
     for index, row in prices.iterrows():
         date = row[DATE_COLUMN_NAME].strftime('%Y-%m-%d')
-        price = 0.0
+        etf_value = 0.0
         for _, stock_row in etf.iterrows():
             stock_name = stock_row['name']
             weight = stock_row['weight']
             last_price = row[stock_name]
-            price += weight * last_price
+            etf_value += weight * last_price
 
-        etf_prices.append({'date': date, 'price': round(price, 2)})
+        etf_prices.append({'date': date, 'price': round(etf_value, 3)})
 
     latest_date_idx = prices[DATE_COLUMN_NAME].idxmax()
     latest_prices_row = prices.loc[latest_date_idx]
