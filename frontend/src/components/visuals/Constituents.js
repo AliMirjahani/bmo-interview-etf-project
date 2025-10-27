@@ -77,10 +77,7 @@ const Constituents = () => {
     const minHeight = 150;
 
     const calculatedHeight = Math.min(
-        Math.max(
-            headerHeight + (filteredData.length * rowHeight) + footerHeight,
-            minHeight
-        ),
+        Math.max(headerHeight + (filteredData.length * rowHeight) + footerHeight, minHeight),
         maxHeight
     );
 
