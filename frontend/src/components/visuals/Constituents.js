@@ -30,7 +30,7 @@ const Constituents = () => {
             flex: 1,
             valueFormatter: (params) => {
                 if (params.value === undefined || params.value === null) return '';
-                return `${(params.value * 100).toFixed(3)}%`;
+                return `${(params.value * 100).toFixed(2)}%`;
             },
             comparator: (valueA, valueB) => valueA - valueB
         },
