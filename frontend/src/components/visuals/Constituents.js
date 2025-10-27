@@ -117,7 +117,6 @@ const Constituents = () => {
                         suppressNoRowsOverlay={false}
                         overlayNoRowsTemplate={'<span>No stocks found</span>'}
                         domLayout='normal'
-                        theme="legacy"
                     />
                 </div>
             </div>
